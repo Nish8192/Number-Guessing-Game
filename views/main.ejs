@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Number Guessing Game</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center">Ask me a question or try to guess the number!</h1>
+        <div style="display: inline-block; width: 33%; vertical-align: top;">
+            <h3 style="text-align: center">Question Log</h3>
+            <% if (guess_history.length <= 0) { %>
+                <p style="text-align: center">Ask a question to get started!</p>
+            <% } else { %>
+                <%for (let i = 0; i < guess_history.length; i++) {%>
+                    <p style="text-align: center"><%= guess_history[i] %></p>
+                <% } %>
+            <% } %>
+        </div>
+        <div style="display: inline-block; width: 33%; vertical-align: top;">
+            <h3 style="text-align: center">Ask Question</h3>
+            <form action="/ask_question" method="POST">
+
+                <input type="radio" name="question_type" value="less_than" checked> Less than: <input type="text" name="less_val" value="100">
+                <br>
+                <br>
+
+                <input type="radio" name="question_type" value="greater_than"> Greater than:
+                <input type="text" name="greater_val" value="1">
+                <br>
+                <br>
+
+                <input type="radio" name="question_type" value="even"> Is it even?
+                <br>
+                <br>
+
+                <input type="radio" name="question_type" value="odd"> Is it odd?
+                <br>
+                <br>
+
+                <input type="radio" name="question_type" value="div_by_three"> Is it divisible by 3?
+                <br>
+                <br>
+
+                <input type="radio" name="question_type" value="prime"> Is it prime?
+                <br>
+                <br>
+                <button type="submit" name="ask_question" id="ask_question">Ask Question</button>
+            </form>
+        </div>
+        <div style="display: inline-block; width: 33%; vertical-align: top; text-align: center">
+            <h3 style="text-align: center">Guess Number</h3>
+            <form action="/guess" method="POST">
+                <input type="text" name="guess_val" required>
+                <br>
+                <br>
+                <button type="submit" name="send_guess" id="send_guess">Send Guess</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
