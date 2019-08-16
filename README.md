@@ -1,9 +1,10 @@
 Instructions on running the Guessing Game
 
 1. Ensure Node.js is installed on your system.
-2. Run 'npm install' via command line in root project folder to install dependencies.
-3. Run 'node server.js' via command line to start Node server.
-4. Navigate to localhost:8000 or 127.0.0.1:8000 in your browser to start the game.
+2. Clone repository to local system.
+3. Run 'npm install' via command line in root project folder to install dependencies.
+4. Run 'node server.js' via command line to start Node server.
+5. Navigate to localhost:8000 or 127.0.0.1:8000 in your browser to start the game.
     
     a. The left side of the window contains a log of previous guesses.
 
@@ -11,4 +12,4 @@ Instructions on running the Guessing Game
 
     c. The right side of the screen allows you to submit your guess.
 
-5. Multiple concurrent games are supported by opening different browser windows/tabs.
+6. Multiple concurrent games are supported by opening different browser windows/tabs.
